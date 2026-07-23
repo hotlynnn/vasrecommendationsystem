@@ -104,6 +104,12 @@ If Digital Propensity is 0.30–0.70 → Recommend one low-cost Digital product.
 If Digital Propensity > 0.70 → Run Model 1 and recommend the Top 3 Digital products.
 ```
 
+- Traditional Upgrade model
+
+**Objective: Among customers who currently use Traditional VAS but have never used Digital VAS, predict who is most likely to upgrade to Digital VAS.?**
+
+It uses a CatBoost binary model and estimates the likelihood of a customer upgrading to a Digital VAS. Only customers with a high probability (e.g., >0.70) are considered for this campaign. 
+
 # Project Folder Structure
 ```text
 vasrecommendationsystem/
