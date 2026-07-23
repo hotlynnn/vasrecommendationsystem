@@ -1,4 +1,5 @@
 ## Overall Architecture
+```text
 Customer Data
       │
       ▼
@@ -33,6 +34,7 @@ Campaign System
       │
       ▼
 SMS / USSD / App / WhatsApp Push
+```
 
 # Project Folder Structure
 
