@@ -1,12 +1,15 @@
 ## Overall Architecture
 ```text
-Customer Data
+Stage 1 - Customer Data - Investigation
       │
       ▼
-Feature Engineering
+Stage 2 - Data Cleaning/ Feature Engineering
       │
       ▼
-Customer Segmentation
+Stage 3 - Product Catalogue
+      │
+      ▼
+Stage 4 - Customer Segmentation
       │
       ▼
 Recommendation Models
@@ -37,48 +40,50 @@ SMS / USSD / App / WhatsApp Push
 ```
 
 # Project Folder Structure
-
+```text
 vasrecommendationsystem/
+│
+├── config/ **(I will add this later)**
+│   └── config.py **(I will add this later)**
+│
+├── src/
+│   ├── stage1_validation.py
+│   ├── stage2_cleaning.py
+│   ├── stage3_eda.py
+│   ├── stage4_product_catalogue.py
+│   └── stage5_customer_segmentation.py
 │
 ├── data/
 │   ├── raw/
-│   │     vas_customer_features.csv
-│   │
 │   ├── stage1/
-│   │     stage1_customer_data.csv
-│   │
 │   ├── stage2/
-│   │     stage2_clean_customer_data.csv
-│   │
 │   ├── stage3/
-│   │     product_catalogue.csv
-│   │
 │   ├── stage4/
-│   │     customer_segments.csv
-│   │
-│   └── outputs/
+│   └── stage5/
 │
-├── notebooks/
-├── models/
-└── src/
+├── run_pipeline.py **(I will add this later)**
+├── requirements.txt
+└── VAS_Product_Recommendation_Engine.md
+```
 
-## Stage 1 — Data Collection
+## Stage 1 — Data Investigation
+Investigation column types and missing vlaues
 
-## Stage 2 — Data cleaning 
+## Stage 2 — Data Cleaning/ Feature Engineering
 You can use data warehouse in proudction here. But I used csv files
 
 ## Stage 3 — Product Catalogue
 Create a product master.
 
 **Example**
-
-#### Product	          Category	    Vendor	    Price
-Football TV	      Digital	    MTN	        5
-Cartoon TV	      Digital	    MTN	        3
-Gospel Music	  Digital	    MTN	        2
+```text
+Product	      Category	    Vendor	    Price
+Football TV	      Digital	   MTN	    5
+Cartoon TV	      Digital	   MTN	    3
+Gospel Music	Digital	   MTN	    2
 CRBT Pop	      CRBT	        Huawei	    2
-SMS Bundle	      SMS	        MTN	        1
-
+SMS Bundle	      SMS	        MTN	          1
+```
 This becomes your recommendation target.
 
 ## Stage 4 — Customer Segmentation
