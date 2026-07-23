@@ -119,6 +119,7 @@ vasrecommendationsystem/
 │   └── stage5_models/
 │       ├── train_next_best_product.py
 │       ├── train_digital_propensity.py
+│       ├── train_traditional_upgrade.py
 │
 ├── data/
 │   ├── raw/  (Contains the outputs from Stage 1 to 4)
@@ -129,7 +130,7 @@ vasrecommendationsystem/
 │ 
 ├── models/   (Contains the models you need to improve)
 │ 
-├── model_outputs/   (Contains the predictions of the model training)
+├── model_outputs/   (Contains the predictions of the model)
 │
 ├── run_pipeline.py (Add this later)
 ├── requirements.txt
