@@ -39,33 +39,6 @@ Campaign System
 SMS / USSD / App / WhatsApp Push
 ```
 
-# Project Folder Structure
-```text
-vasrecommendationsystem/
-│
-├── config/ **(I will add this later)**
-│   └── config.py **(I will add this later)**
-│
-├── src/
-│   ├── stage1_validation.py
-│   ├── stage2_cleaning.py
-│   ├── stage3_eda.py
-│   ├── stage4_product_catalogue.py
-│   └── stage5_customer_segmentation.py
-│
-├── data/
-│   ├── raw/
-│   ├── stage1/
-│   ├── stage2/
-│   ├── stage3/
-│   ├── stage4/
-│   └── stage5/
-│
-├── run_pipeline.py **(I will add this later)**
-├── requirements.txt
-└── VAS_Product_Recommendation_Engine.md
-```
-
 ## Stage 1 — Data Investigation
 Investigation column types and missing vlaues
 
@@ -77,12 +50,12 @@ Create a product master.
 
 **Example**
 ```text
-Product	      Category	    Vendor	    Price
-Football TV	      Digital	   MTN	    5
-Cartoon TV	      Digital	   MTN	    3
-Gospel Music	Digital	   MTN	    2
-CRBT Pop	      CRBT	        Huawei	    2
-SMS Bundle	      SMS	        MTN	          1
+Product	      Category	      Vendor	    Price
+Football TV	      Digital	        MTN	        5
+Cartoon TV	      Digital	        MTN	       3
+Gospel Music	Digital	        MTN	       2
+CRBT Pop	      CRBT	           Huawei	       2
+SMS Bundle	      SMS	          MTN	       1
 ```
 This becomes your recommendation target.
 
@@ -112,3 +85,30 @@ No VAS
 Dormant
 
 **Each segment will use a different recommendation strategy.**
+
+# Project Folder Structure
+```text
+vasrecommendationsystem/
+│
+├── config/ **(I will add this later)**
+│   └── config.py **(I will add this later)**
+│
+├── src/
+│   ├── stage1_validation.py
+│   ├── stage2_cleaning.py
+│   ├── stage3_eda.py
+│   ├── stage4_product_catalogue.py
+│   └── stage5_customer_segmentation.py
+│
+├── data/
+│   ├── raw/
+│   ├── stage1/
+│   ├── stage2/
+│   ├── stage3/
+│   ├── stage4/
+│   └── stage5/
+│
+├── run_pipeline.py **(I will add this later)**
+├── requirements.txt
+└── VAS_Product_Recommendation_Engine.md
+```
