@@ -118,9 +118,10 @@ vasrecommendationsystem/
 │   ├── stage4_customer_segmentation.py
 │   └── stage5_models/
 │       ├── train_next_best_product.py
+│       ├── train_digital_propensity.py
 │
 ├── data/
-│   ├── raw/
+│   ├── raw/  (Contains the outputs from Stage 1 to 4)
 │   ├── stage1/
 │   ├── stage2/
 │   ├── stage3/
@@ -132,5 +133,6 @@ vasrecommendationsystem/
 │
 ├── run_pipeline.py (Add this later)
 ├── requirements.txt
-└── VAS_Product_Recommendation_Engine.md
+├── VAS_Product_Recommendation_Engine.md
+└── VAS_Product_Recommendation_Engine_Design_Updated.docx
 ```
