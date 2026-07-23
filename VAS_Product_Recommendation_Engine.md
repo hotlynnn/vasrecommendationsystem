@@ -51,11 +51,11 @@ Create a product master.
 **Example**
 ```text
 Product	      Category	      Vendor	    Price
-Football TV	      Digital	        MTN	        5
-Cartoon TV	      Digital	        MTN	       3
+Football TV	      Digital	     MTN	        5
+Cartoon TV	      Digital	     MTN	       3
 Gospel Music	Digital	        MTN	       2
-CRBT Pop	      CRBT	           Huawei	       2
-SMS Bundle	      SMS	          MTN	       1
+CRBT Pop	      CRBT	         Huawei	       2
+SMS Bundle	      SMS	         MTN	       1
 ```
 This becomes your recommendation target.
 
