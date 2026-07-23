@@ -90,14 +90,16 @@ Dormant
 ```text
 vasrecommendationsystem/
 │
-├── config/ (I will add this later)
-│   └── config.py (I will add this later)
+├── config/ (Add this later)
+│   └── config.py (Add this later)
 │
 ├── src/
 │   ├── stage1_validation.py
 │   ├── stage2_cleaning.py
 │   ├── stage3_product_catalogue.py
-│   └── stage4_customer_segmentation.py
+│   ├── stage4_customer_segmentation.py
+│   └── stage5_models/
+│       ├── train_next_best_product.py
 │
 ├── data/
 │   ├── raw/
@@ -106,8 +108,12 @@ vasrecommendationsystem/
 │   ├── stage3/
 │   ├── stage4/
 │   └── stage5/
+│ 
+├── models/   (Contains the models you need to improve)
+│ 
+├── model_outputs/   (Contains the outputs of the model training)
 │
-├── run_pipeline.py (I will add this later)
+├── run_pipeline.py (Add this later)
 ├── requirements.txt
 └── VAS_Product_Recommendation_Engine.md
 ```
