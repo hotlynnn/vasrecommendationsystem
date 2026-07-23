@@ -88,18 +88,21 @@ Dormant
 
 ## Stage 5 — Models
 - Next Best Product model
+
 **Objective: Which Digital product should this customer subscribe to?**
 
 The model you have in the project is very basic and you need to improve it. It uses a CatBoost multiclass which predicts the specific VAS product (label_product_name) a customer is most likely to subscribe to next. It gives the score for the next 3 top products.
 
 - Digital Propensity model
+
 **Objective: How likely is this customer to subscribe to any Digital VAS product??**
 
 It uses a CatBoost binary model and estimates the likelihood of a customer adopting any Digital VAS. Only customers with a high propensity (e.g., >0.70) proceed to the Next Best Product recommendation. 
-**Example:**
+```text
 If Digital Propensity < 0.30 → Don't recommend Digital VAS; recommend Traditional VAS instead.
 If Digital Propensity is 0.30–0.70 → Recommend one low-cost Digital product.
 If Digital Propensity > 0.70 → Run Model 1 and recommend the Top 3 Digital products.
+```
 
 # Project Folder Structure
 ```text
