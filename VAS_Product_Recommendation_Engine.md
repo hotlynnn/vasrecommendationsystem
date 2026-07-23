@@ -1,4 +1,4 @@
-## Overall Architecture
+# Overall Architecture
 ```text
 Stage 1 - Customer Data - Investigation
       │
@@ -97,7 +97,7 @@ The model you have in the project is very basic and you need to improve it. It u
 
 **Objective: How likely is this customer to subscribe to any Digital VAS product??**
 
-It uses a CatBoost binary model and estimates the likelihood of a customer adopting any Digital VAS. Only customers with a high propensity (e.g., >0.70) proceed to the Next Best Product recommendation. 
+It uses a CatBoost model and estimates the likelihood of a customer adopting any Digital VAS. Only customers with a high propensity (e.g., >0.70) proceed to the Next Best Product recommendation. The propensity is not the probability that the customer has used a product before. It is the predicted probability that the customer will subscribe to a Digital VAS product in the future, based on their characteristics (age, spend, handset, usage, location, etc.). We will use this to recommend first products for new customers because propensity measures likelihood of future adoption, not past usage.
 ```text
 If Digital Propensity < 0.30 → Don't recommend Digital VAS; recommend Traditional VAS instead.
 If Digital Propensity is 0.30–0.70 → Recommend one low-cost Digital product.
@@ -108,7 +108,17 @@ If Digital Propensity > 0.70 → Run Model 1 and recommend the Top 3 Digital pro
 
 **Objective: Among customers who currently use Traditional VAS but have never used Digital VAS, predict who is most likely to upgrade to Digital VAS.?**
 
-It uses a CatBoost binary model and estimates the likelihood of a customer upgrading to a Digital VAS. Only customers with a high probability (e.g., >0.70) are considered for this campaign. 
+It uses a CatBoost model and estimates the likelihood of a customer upgrading to a Digital VAS. Only customers with a high probability (e.g., >0.70) are considered for this campaign. 
+
+- Churn model
+
+**Objective: Is the customer likely to stop using VAS products?**
+
+It uses a CatBoost model and estimates the likelihood of a customer stopping using a VAS product. Without a churn model, you might spend marketing budget recommending new products to customers who are about to leave, resulting in poor campaign performance.
+```text
+Customer A has a 95% churn probability.
+Instead of recommending a new product, you first send a retention offer (discount, free trial, bonus data, etc.).
+```
 
 # Project Folder Structure
 ```text
